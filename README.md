@@ -1,208 +1,204 @@
-🧠 Backend Developer Intern Assignment
-Scalable REST API with Authentication, Roles & Tasks
+# 🚀 Backend Developer Intern Assignment  
+### Scalable REST API with Authentication, Roles & Tasks  
+**Full-Stack MERN Deployment (Render + Vercel)**
 
-Full-Stack MERN Deployment (Render + Vercel)
+![Node.js](https://img.shields.io/badge/Node.js-Backend-green)
+![React](https://img.shields.io/badge/React-Frontend-blue)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-darkgreen)
+![JWT](https://img.shields.io/badge/Auth-JWT-orange)
+![Deployment](https://img.shields.io/badge/Deploy-Render%20%7C%20Vercel-black)
 
-📌 Project Overview
+---
 
-This project was developed as part of the Backend Developer Intern Assignment to demonstrate the ability to:
+# 📌 Project Overview
 
-Design secure, scalable backend APIs
+This project was built as part of a **Backend Developer Intern Assignment**  
+to demonstrate the ability to design **secure, scalable backend systems**  
+with a **basic frontend UI** for interaction.
 
-Implement JWT authentication & role-based access
+The application includes:
 
-Build CRUD operations for a secondary entity (Tasks)
+- 🔐 JWT Authentication & Authorization  
+- 👥 Role-based access control (User / Admin)  
+- 📋 CRUD operations for Tasks  
+- 📚 Swagger API documentation  
+- ☁️ Full deployment (Render + Vercel)
 
-Create a basic frontend UI to interact with APIs
+---
 
-Deploy a production-ready full-stack application
+# 🏗️ Project Structure
 
-🚀 Live Deployment
-🔗 Frontend (Vercel)
+task-manager-backend-intern/
+│
+├── backend/
+│ ├── controllers/
+│ ├── models/
+│ ├── routes/
+│ ├── middleware/
+│ ├── config/
+│ └── server.js
+│
+├── frontend/
+│ ├── src/
+│ │ ├── pages/
+│ │ ├── components/
+│ │ ├── services/
+│ │ └── App.jsx
+│ └── index.html
+│
+└── README.md
 
-https://task-manager-backend-intern.vercel.app
 
-🔗 Backend API (Render)
+---
 
-https://task-manager-backend-intern.onrender.com/api/v1
+# ⚙️ Tech Stack
 
-📘 Swagger API Docs
+## Backend
+- Node.js
+- Express.js
+- MongoDB + Mongoose
+- JWT Authentication
+- Bcrypt Password Hashing
+- Swagger API Docs
 
-https://task-manager-backend-intern.onrender.com/api-docs
+## Frontend
+- React.js
+- Axios
+- React Router
+- Simple protected dashboard UI
 
-🏗️ Tech Stack
-Backend
+## Deployment
+- **Backend:** Render  
+- **Frontend:** Vercel  
 
-Node.js + Express.js
+---
 
-MongoDB (Mongoose)
+# 🔐 Core Features
 
-JWT Authentication
+### Authentication
+- User registration
+- Secure password hashing
+- JWT login & token verification
 
-bcrypt password hashing
+### Authorization
+- Role-based access (User / Admin)
+- Protected routes using middleware
 
-Swagger API Documentation
+### Task Management
+- Create task  
+- Get all tasks  
+- Delete task  
 
-REST API Versioning (/api/v1)
+### API Quality
+- RESTful design  
+- Proper status codes  
+- Input validation  
+- Centralized error handling  
+- API versioning (`/api/v1`)  
 
-CORS, validation & error handling
+---
 
-Deployed on Render
+# 📸 Demo Flow
 
-Frontend
+1. Register a new user  
+2. Login to receive **JWT token**  
+3. Access protected **Dashboard**  
+4. Create & delete tasks  
+5. Logout securely  
 
-React.js (Vite)
+All protected routes require **valid JWT authentication**.
 
-Axios API integration
+---
 
-JWT token storage
+# 🌐 Live Deployment
 
-Protected dashboard
+### Backend API
+👉 https://task-manager-backend-intern.onrender.com/api/v1
 
-Task CRUD UI
+### Frontend App
+👉 https://task-manager-backend-intern.vercel.app
 
-Deployed on Vercel
+### Swagger Docs
+👉 https://task-manager-backend-intern.onrender.com/api-docs
 
-🔐 Core Features Implemented
-✅ Authentication & Security
+---
 
-User registration & login
+# 🧪 API Endpoints
 
-Hashed passwords using bcrypt
+## Auth
+- `POST /auth/register`
+- `POST /auth/login`
 
-JWT token generation & verification
+## Tasks (Protected)
+- `GET /tasks`
+- `POST /tasks`
+- `DELETE /tasks/:id`
 
-Protected routes requiring valid token
+JWT token required in:
 
-Role-based structure ready (user/admin)
+Authorization: Bearer <token>
 
-✅ Task CRUD APIs
 
-Create task
+---
 
-Get all tasks
+# 💻 Local Setup Instructions
 
-Delete task
+## 1️⃣ Clone Repository
 
-Secure access via JWT
-
-✅ API Quality & Architecture
-
-RESTful API structure
-
-Proper HTTP status codes
-
-Centralized error handling
-
-Request validation
-
-Scalable folder structure
-
-API versioning (/api/v1)
-
-✅ Frontend Functionality
-
-Register & Login UI
-
-JWT stored in localStorage
-
-Redirect to protected dashboard
-
-Create & delete tasks
-
-Error handling from backend responses
-
-📂 Project Structure
-backend/
- ├── controllers/
- ├── models/
- ├── routes/
- ├── middleware/
- ├── config/
- └── server.js
-
-frontend/
- ├── src/
- │   ├── pages/
- │   ├── components/
- │   ├── services/
- │   └── App.jsx
-
-⚙️ Local Setup Instructions
-1️⃣ Clone Repository
-git clone https://github.com/<your-username>/task-manager-backend-intern.git
+```bash
+git clone https://github.com/KumarManglam-123/task-manager-backend-intern.git
 cd task-manager-backend-intern
-
 2️⃣ Backend Setup
 cd backend
 npm install
-
-
 Create .env file:
 
 PORT=5000
 MONGO_URI=your_mongodb_connection
 JWT_SECRET=your_secret_key
-
-
 Run backend:
 
-npm start
-
+npm run dev
 3️⃣ Frontend Setup
 cd frontend
 npm install
 npm run dev
-
 🔒 Security Practices
+Password hashing using bcrypt
 
-Password hashing with bcrypt
+JWT token authentication
 
-Secure JWT authentication
+Protected API routes via middleware
 
-Protected API routes
+Input validation & error handling
 
-Input validation & sanitization
+Environment variables for secrets
 
-Environment variable configuration
+📈 Scalability Notes
+This project is structured for real-world scalability:
 
-CORS handling for production
+Modular MVC backend architecture
 
-📈 Scalability Considerations
+Middleware-based auth & validation
 
-This architecture is designed for scalability:
+API versioning support
 
-Modular MVC structure
+Easily extendable to:
 
-Easy migration to microservices
+Redis caching
 
-Ready for Redis caching
+Microservices
 
-Supports Docker containerization
+Load balancing
 
-Can integrate load balancers & CI/CD
-
-🧪 API Testing
-
-You can test APIs via:
-
-Swagger UI
-
-Postman collection
-
-Frontend dashboard
-
-📦 Deliverables Completed
-
-✅ Hosted backend with working APIs
-✅ JWT authentication & role structure
-✅ CRUD operations for tasks
-✅ React frontend connected to APIs
-✅ Swagger documentation
-✅ Production deployment
-✅ Scalable architecture
+Docker deployment
 
 👨‍💻 Author
-
 Kumar Manglam
-Backend Developer Intern Candidate
+
+📧 Email: kmanglam2003@gmail.com
+
+🔗 GitHub: https://github.com/KumarManglam-123
+
+
+
