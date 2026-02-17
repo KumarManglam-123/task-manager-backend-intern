@@ -9,10 +9,11 @@ const options = {
       description: "Scalable REST API with Auth, Roles, and Tasks",
     },
     servers: [
-      {
-        url: "http://localhost:5000/api/v1",
-      },
-    ],
+  {
+    url: "https://task-manager-backend-intern.onrender.com",
+  },
+],
+
     components: {
       securitySchemes: {
         bearerAuth: {
