@@ -1,23 +1,17 @@
-import { useNavigate } from "react-router-dom";
 import api from "../services/api";
 
 export default function Login() {
-  const navigate = useNavigate();
-
   const login = async () => {
     try {
       const res = await api.post("/auth/login", {
-        email: "test@test.com",
+        email: "test3@test.com",
         password: "123456",
       });
 
       localStorage.setItem("token", res.data.token);
-
-      // ✅ React navigation
-      navigate("/dashboard");
+      window.location.href = "/dashboard";
     } catch (err) {
-      alert("Login failed");
-      console.error(err);
+      alert(err.response?.data?.message || "Login failed");
     }
   };
 
